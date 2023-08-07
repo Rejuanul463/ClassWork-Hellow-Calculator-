@@ -39,8 +39,14 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: [
           TextField(
-            decoration: InputDecoration(labelText: ""),
-            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+            ),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold ,),
+            textAlign: TextAlign.end,
+            readOnly: true,
+            controller: TextEditingController(text: ''), // Replace '579' with your current input
           ),
           ElevatedButton(
             onPressed: () {
